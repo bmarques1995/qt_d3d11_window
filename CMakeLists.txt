@@ -12,7 +12,8 @@ endif()
 
 set(INSTALL_EXAMPLEDIR "${INSTALL_EXAMPLESDIR}/opengl/openglwindow")
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui OpenGL)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui)
+find_library(D3D12_TARGET NAMES d3d11 REQUIRED)
 
 qt_standard_project_setup()
 
